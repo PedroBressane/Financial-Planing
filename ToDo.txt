@@ -1,0 +1,5 @@
+Deixar saldo mensal, despesa mensal e total livre interativos
+Adequar o exportar extrato pdf em view_extrato para o período/categoria corretamente
+Deiaxar a progressbar de equilibrio financeiro de maneira interativa 
+em ver_contas, dar espaço entre as contas vencidas e arrumar o botão pagar
+verificar o contas proxima do vencimento e contas vencidas a serem visualizadas corretamente no home
