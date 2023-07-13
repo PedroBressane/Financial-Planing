@@ -3,7 +3,6 @@
 {% block 'head' %}
 
     <link href="{% static 'perfil/css/home.css' %}" rel="stylesheet">
-    <link href="{% static 'perfil/css/gerenciar.css' %}" rel="stylesheet">
 
 {% endblock %}
 
@@ -41,15 +40,23 @@
 
             <div class="col-md-5">
                 <p class="fonte-destaque">Nova conta</p>
-                
+              
                 <form action="{% url 'cadastrar_banco' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
                     <label>Apelido</label>
                     <input type="text" name="apelido" class="form-control" placeholder="">
                     <br>
+               
                     <label>Banco</label>
                     <select name="banco" class="form-select">
                         <option value="NU">Nubank</option>
+                        <option value="CE">Caixa econômica</option>
+                        <option value="IU">Itaú Unibanco</option>
+                        <option value="BD">Bradesco</option>
+                        <option value="BB">Banco do Brasil</option>
+                        <option value="ST">Santander</option>
+                        <option value="SC">Sicoob</option>
                     </select>
+           
                     <br>
                     <label>Tipo</label>
                     <select name="tipo" class="form-select">
