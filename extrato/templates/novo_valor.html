@@ -19,9 +19,6 @@
         <br>
         <span class="fonte-destaque">Adicionar entradas/saídas</span>
         <div class="row">
-
-#novo valor não está exibindo categoria ou lazer corretamente
-
             <div class="col-md-7">
                 <form action="{% url 'novo_valor' %}" method="POST">{% csrf_token %}
                     <div class="row">
@@ -32,11 +29,11 @@
 
                         <div class="col-md">
                             <label>Categoria</label>
-                            {% for categoria in categorias %}
-                            <select name="categoria" class="form-select">
-                                <option value="{{categoria.id}}">{{categoria}}</option>
-                            {% endfor %}
-                            </select>
+                          <select name="categoria" class="form-select">
+                           {% for categoria in categorias %}
+                             <option value="{{categoria.id}}">{{categoria}}</option>
+                           {% endfor %}
+                         </select>
                         </div>
                     </div>
                     <br>
@@ -51,9 +48,9 @@
 
                         <div class="col-md">
                             <label>Conta</label>
-                            {% for conta in contas%}
                             <select name="conta" class="form-select">
-                                <option value="{{conta.id}}">{{conta}}</option>
+                            {% for conta in contas%}
+                                <option value={{conta.id}}>{{conta}}</option>
                             {% endfor %}
                             </select>
                         </div>
