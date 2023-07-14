@@ -82,14 +82,14 @@
                             <div class="saldo">
                                 <span class="fonte-destaque">Saldo mensal</span>
                                 <br>
-                                <span class="font-light">R$ 0.000,00</span>
+                                <span class="font-light">R$ {{total_contas}}</span>                           
                             </div>
                         </div>
                         <div class="col-md">
                             <div class="despesa">
                                 <span class="fonte-destaque">Despesa mensal</span>
                                 <br>
-                                <span class="font-light">R$ 0.000,00</span>
+                                <span class="font-light">R$ {{total_saidas}}</span>
                             </div>
 
                         </div>
@@ -97,7 +97,7 @@
                     </div>
                     <hr class="hr-borda">
                     <span class="fonte-destaque">Total livre</span>
-                    <span class="font-light negativo">R$ 0.000,00</span>
+                    <span class="font-light negativo">R$ {{total_livre}}</span>
                     <hr class="hr-borda">
                     <a href="{% url 'view_extrato' %}" class="botao-principal">Gerenciar dados mensais</a>
                 </div>
