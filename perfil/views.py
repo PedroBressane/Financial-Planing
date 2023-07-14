@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
 from .models import Conta, Categoria
 from django.contrib import messages
 from django.contrib.messages import constants
@@ -24,7 +23,9 @@ def home(request):
 
      percentual_gastos_essenciais, percentual_gastos_nao_essenciais = calcula_equilibrio_financeiro()
 
-     return render(request,'home.html', {'contas': contas, 'total_contas': total_contas, 'total_entradas': total_entradas, 'total_saidas': total_saidas, 'percentual_gastos_essenciais': int(percentual_gastos_essenciais), 'percentual_gastos_nao_essenciais': int(percentual_gastos_nao_essenciais),}) 
+     total_livre = total_contas - total_saidas
+
+     return render(request,'home.html', {'contas': contas, 'total_contas': total_contas, 'total_entradas': total_entradas, 'total_saidas': total_saidas, 'percentual_gastos_essenciais': int(percentual_gastos_essenciais), 'percentual_gastos_nao_essenciais': int(percentual_gastos_nao_essenciais), 'total_livre': total_livre,}) 
 
 #progress bar não está exibindo corretamente
 
