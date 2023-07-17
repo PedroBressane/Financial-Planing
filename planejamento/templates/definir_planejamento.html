@@ -3,7 +3,6 @@
 {% block 'head' %}
 
     <link href="{% static 'perfil/css/home.css' %}" rel="stylesheet">
-    <link href="{% static 'perfil/css/gerenciar.css' %}" rel="stylesheet">
     <link href="{% static 'extrato/css/view_extrato.css' %}" rel="stylesheet">
 
 {% endblock %}
@@ -27,7 +26,7 @@
                     <tr class="linha">
                         <td>{{categoria}}</td>
                         <td><input type="text" id='valor-categoria-{{categoria.id}}'class="form-control" value="{{categoria.valor_planejamento}}"></td>
-                        <td><button onclick="update_valor_planejamento_categoria({{categoria.id}})" style="width: 100%;" class="botao-secundario">Salvar</button></td>         
+                        <td><button onclick="update_valor_categoria({{categoria.id}})" style="width: 100%;" class="botao-secundario">Salvar</button></td>         
                     </tr>
                 {% endfor %}
                 
@@ -40,7 +39,7 @@
 
    <script>
 
-        function update_valor_planejamento_categoria(id){
+        function update_valor_categoria(id){
             valor = document.getElementById('valor-categoria-'+id).value
             console.log(valor)
 
